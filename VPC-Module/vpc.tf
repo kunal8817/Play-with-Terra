@@ -1,7 +1,7 @@
 # Module for VPC
 module "my_terraform_vpc" {
     source = "terraform-aws-modules/vpc/aws"
-    version = "2.78.0"
+    version = "3.14.3"
 
 # VPC Basic Details
     name = "VPC-Module-Dev"
@@ -13,7 +13,7 @@ module "my_terraform_vpc" {
 # Database Subnets
     create_database_subnet_group = true
     create_database_subnet_route_table = true
-    database_subnets     = ["10.0.151.0/24,", "10.0.152.0/24"]
+    database_subnets     = ["10.0.21.0/24", "10.0.22.0/24"]
 
 # NAT Gateways
     enable_nat_gateway = true
